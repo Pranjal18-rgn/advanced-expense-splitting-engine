@@ -65,3 +65,17 @@ python app.py
 
 ### Frontend
 Open index.html in browser
+
+## 📸 Screenshots
+
+### 👥 Users Page
+![Users](screenshots/users.png)
+
+### 💰 Expense Page
+![Expense](screenshots/expense.png)
+
+### 📊 Dashboard
+![Dashboard](screenshots/Dashboard.png)
+
+### 📈 Graph
+![Graph](screenshots/graph.png)
