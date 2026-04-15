@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Expense Splitter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h2>💸 Splitter</h2>
+            <button onclick="showPage('users')">Users</button>
+            <button onclick="showPage('expense')">Add Expense</button>
+            <button onclick="showPage('dashboard')">Dashboard</button>
+        </div>
+
+        <div class="main">
+
+            <p id="msg"></p>
+
+            <!-- USERS -->
+            <div id="users" class="page active">
+                <h2>Add User</h2>
+                <input id="user" placeholder="Enter name">
+                <button onclick="addUser()">Add User</button>
+            </div>
+
+            <!-- EXPENSE -->
+            <div id="expense" class="page">
+                <h2>Add Expense</h2>
+
+                <label>Payer</label>
+                <select id="payer"></select>
+
+                <label>Amount</label>
+                <input id="amount" type="number" placeholder="Amount">
+
+                <label>Split Type</label>
+                <select id="splitType">
+                    <option value="equal">Equal</option>
+                    <option value="custom">Custom</option>
+                </select>
+
+                <label>Participants</label>
+                <input id="participants" placeholder="A,B,C">
+
+                <!-- Custom Split -->
+                <div id="customBox" style="display:none;">
+                    <textarea id="customData" placeholder="A:300,B:200"></textarea>
+                </div>
+
+                <button onclick="addExpense()">Add Expense</button>
+            </div>
+
+            <!-- DASHBOARD -->
+            <div id="dashboard" class="page">
+                <h2>Dashboard</h2>
+
+                <button onclick="getBalances()">Show Balances</button>
+                <ul id="balances"></ul>
+
+                <button onclick="settle()">Simplify</button>
+                <ul id="result"></ul>
+
+                <button onclick="history()">Show History</button>
+                <ul id="historyList"></ul>
+
+                <!-- RESET BUTTON -->
+                <button onclick="resetAll()">Reset Session</button>
+
+                <canvas id="chart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
