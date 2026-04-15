@@ -1,0 +1,3 @@
+backend/expense.db
+__pycache__/
+*.pyc
